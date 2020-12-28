@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sending premium SMS</title>
+    </head>
+    <body>
+        <h2>Subscribing users </h2>
+        <form method="POST" action="subscribeuser.php">
+            Phone number: <input type="text" required name="phoneNumber"> <br><br>
+            Shortcode: <input type="text" name="shortcode" required> <br><br>
+            Keyword: <input type="text" name="keyword" required> <br><br>
+            <input type="submit" name="submit_btn" value="Subscribe user">
+
+        </form>
+
+
+        <hr>
+        <h2>Fetching subscribtions from gateway</h2>
+        <hr>
+
+
+        <form method="POST" action="fetchsubscription.php">
+            Shortcode: <input type="text" name="shortcode" required> <br><br>
+            Keyword: <input type="text" name="keyword" required> <br><br>
+            <input type="submit" name="submit_btn_" value="Fetch subscribtions from gateway">
+        </form>
+
+    </body>
+</html>
