@@ -1,3 +1,6 @@
 # Build and Release Folders
 util.php
 vendor/
+.htaccess
+home.php
+/nbproject/private/

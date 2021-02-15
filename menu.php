@@ -211,8 +211,8 @@
 
 
         public function persistInvalidEntry ($sessionId,$user, $ussdLevel,$pdo){
-            $stmt = $pdo->prepare("insert into ussdsession (sessionId,ussdLevel) values (?,?)");
-            $stmt->execute([$sessionId, $ussdLevel]);
+            $stmt = $pdo->prepare("insert into ussdsession (sessionId,ussdLevel, uid) values (?,?,?)");
+            $stmt->execute([$sessionId, $ussdLevel, $user->readUserId($pdo)]);
             $stmt= null;
         }
 

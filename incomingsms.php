@@ -18,5 +18,5 @@
 
        $user->register($pdo);
 
-
+      
 ?>

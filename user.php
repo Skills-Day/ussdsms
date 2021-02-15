@@ -48,8 +48,8 @@
                 $stmt = $pdo->prepare("INSERT INTO user (name, pin, phone, balance) values(?,?,?,?)");
                 $stmt->execute([$this->getName(),$hashedPin, $this->getPhone(),$this->getBalance()]);
                 //send an sms to a user 
-                $sms = new Sms($this->getPhone());
-                $sms->sendSMS("You have been registered",$this->getPhone());
+                //$sms = new Sms($this->getPhone());
+                //$sms->sendSMS("You have been registered",$this->getPhone());
 
            }catch(PDOException $e){
                 echo $e->getMessage();

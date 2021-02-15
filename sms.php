@@ -27,7 +27,8 @@
             $result = $sms->send([
                 'to'      => $recipients,
                 'message' => $message,
-                'from'    => Util::$SMS_SHORTCODE
+                'from'    => Util::$SMS_SHORTCODE,
+                'keyword' => Util::$SMS_SHORTCODE_KEYWORD
             ]);
             return $result;
         }
@@ -63,7 +64,7 @@
         }
 
         public function sendPremiumSms ($pdo, $shortcode, $keyword, $message){
-            $recipients =$this->fetchActivePhoneNumbers($pdo, $shortcode, $keyword);
+            $recipients = $this->fetchActivePhoneNumbers($pdo, $shortcode, $keyword);
             $content = $this->AT->content();
             $response = $content->send([
                 'message'=> $message,
@@ -115,7 +116,7 @@
             $responseArray = $content->fetchSubscriptions([
                 'shortCode'=>$shortcode,
                 'keyword'=>$keyword,
-                'lastReceivedId'=>2007993
+                'lastReceivedId'=>0,
             ])['data']->responses;
 
             foreach($responseArray as $res){
