@@ -1,5 +1,5 @@
 # ussdsms
-Complete course on ussd and sms. To be pusblished soon on [SkillsDay](https://www.skillsday.com) and [Udemy](https://www.udemy.com)
+Complete course on ussd and sms. To be pusblished soon on [SkillsDay](https://skillsday.co/courses/building-and-testing-ussd-and-sms-applications/) 
 ### How to deploy: 
 Comming soon! 
 
